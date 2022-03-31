@@ -1,0 +1,7 @@
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  source:
+    repoURL: https://github.com/ninech/argocd-example-apps
+    targetRevision: HEAD

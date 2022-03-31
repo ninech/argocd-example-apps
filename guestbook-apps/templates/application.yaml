@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guestbook
+spec:
+  destination:
+    namespace: {{ .Values.spec.destination.namespace }}
+    name: {{ .Values.spec.destination.name }}
+  project: default
+  source:
+    path: guestbook
+    repoURL: {{ .Values.spec.source.repoURL }}
+    targetRevision: {{ .Values.spec.source.targetRevision }}
